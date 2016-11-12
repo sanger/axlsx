@@ -80,15 +80,16 @@ module Axlsx
   def self.validate_angle(v)
     raise ArgumentError, (ERR_ANGLE % v.inspect) unless (v.to_i >= -5400000 && v.to_i <= 5400000)
   end
-  # Requires that the value is a Fixnum or Integer and is greater or equal to 0
+
+  # Requires that the value is a Integer and is greater or equal to 0
   # @param [Any] v The value validated
-  # @raise [ArgumentError] raised if the value is not a Fixnum or Integer value greater or equal to 0
+  # @raise [ArgumentError] raised if the value is not a Integer value greater or equal to 0
   # @return [Boolean] true if the data is valid
   def self.validate_unsigned_int(v)
     DataTypeValidator.validate(:unsigned_int, [Fixnum, Integer], v, lambda { |arg| arg.respond_to?(:>=) && arg >= 0 })
   end
 
-  # Requires that the value is a Fixnum Integer or Float and is greater or equal to 0
+  # Requires that the value is a Integer or Float and is greater or equal to 0
   # @param [Any] v The value validated
   # @raise [ArgumentError] raised if the value is not a Fixnun, Integer, Float value greater or equal to 0
   # @return [Boolean] true if the data is valid
@@ -103,7 +104,7 @@ module Axlsx
   end
 
   # Requires that the value is a form that can be evaluated as a boolean in an xml document.
-  # The value must be an instance of Fixnum, String, Integer, Symbol, TrueClass or FalseClass and
+  # The value must be an instance of String, Integer, Symbol, TrueClass or FalseClass and
   # it must be one of 0, 1, "true", "false", :true, :false, true, false, "0", or "1"
   # @param [Any] v The value validated
   def self.validate_boolean(v)
@@ -147,7 +148,7 @@ module Axlsx
     RestrictionValidator.validate "cell run style u", [:none, :single, :double, :singleAccounting, :doubleAccounting], v
   end
 
-  # validates cell style family which must be between 1 and 5 
+  # validates cell style family which must be between 1 and 5
   def self.validate_family(v)
     RestrictionValidator.validate "cell run style family", 1..5, v
   end

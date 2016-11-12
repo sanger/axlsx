@@ -80,9 +80,9 @@ module Axlsx
     # one of the allowed types
     # @return [SimpleTypedList]
     def +(v)
-      v.each do |item| 
+      v.each do |item|
         DataTypeValidator.validate "SimpleTypedList.+", @allowed_types, item
-        @list << item 
+        @list << item
       end
     end
 
@@ -143,8 +143,8 @@ module Axlsx
     # determines if the index is protected
     # @param [Integer] index
     def protected? index
-      return false unless @locked_at.is_a? Fixnum
-      index < @locked_at
+      return false unless locked_at.is_a? Integer
+      index < locked_at
     end
 
     # override the equality method so that this object can be compared to a simple array.
