@@ -1,7 +1,14 @@
 Axlsx: Office Open XML Spreadsheet Generation
 ====================================
-** :boom: WARNING :boom: This is a fork from randym/axlsx@46a17e4b3fe0531ac6b2e48f818a982a86f538e4 in order to fix the Fixnum deprecation warnings. It can be considered an extension of version 2.0.1. **
-** There is no intent to continue to develop this fork once a new AXLSX release has been produced. **
+:boom: **WARNING** :boom: **This is a fork from randym/axlsx@46a17e4b3fe0531ac6b2e48f818a982a86f538e4 in order to fix the Fixnum deprecation warnings. It can be considered an extension of version 2.0.1.
+There is no intent to continue to develop this fork once a new AXLSX release has been produced.**
+
+Summary of differences from randy/axlsx:
+ - Branched from 2.0.1
+ - Added Ruby 2.4.1 to travis test matrix
+ - Removed references to Fixnum: This was mostly using the changes by takkanm with additional minor modifications to correct references which had been removed from master at the time of takkanm's fixes.
+ - Updated rubyzip dependencies
+ - Updated version to 2.0.2sgr
 
 [![Build Status](https://secure.travis-ci.org/randym/axlsx.png?branch=master)](http://travis-ci.org/randym/axlsx/)
 
