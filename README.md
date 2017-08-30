@@ -1,5 +1,8 @@
 Axlsx: Office Open XML Spreadsheet Generation
 ====================================
+** :boom: WARNING :boom: This is a fork from randym/axlsx@46a17e4b3fe0531ac6b2e48f818a982a86f538e4 in order to fix the Fixnum deprecation warnings. It can be considered an extension of version 2.0.1. **
+** There is no intent to continue to develop this fork once a new AXLSX release has been produced. **
+
 [![Build Status](https://secure.travis-ci.org/randym/axlsx.png?branch=master)](http://travis-ci.org/randym/axlsx/)
 
 If you are using axlsx for comercial purposes, or just want to show your
